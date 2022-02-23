@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 // import Video from '../../videos/video.mp4';
 import { Button } from '../ButtonElements';
+import  HeroImage from '../../images/hero.jpg'
 import {
     HeroContainer,
     // HeroBg,
@@ -17,7 +18,7 @@ const HeroSection = () => {
 
     return (
         <HeroContainer>
-            <img src="./images/hero.jpg" alt="hero" style={{
+            <img src={HeroImage} alt="hero" style={{
                 height: "100%",
                 width: "130%"
             }} />
@@ -27,7 +28,7 @@ const HeroSection = () => {
             <HeroContent>
                 <HeroH1>I'm Hamza Bouyahya</HeroH1>
                 <HeroP>
-                    Web Developer
+                    Front-end Developer
                 </HeroP>
                 <HeroP>
                     By experience ، we discover a short path by a long wandering.
