@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
@@ -111,7 +111,7 @@ function ProductCTA(props) {
                 <TextField
                   noBorder
                   className={classes.textField}
-                  placeholder="Nom"
+                  placeholder="Name"
                   name="name"
                   id="name"
                   value={formik.values.name}
@@ -157,7 +157,7 @@ function ProductCTA(props) {
                     backgroundColor: "#001c2f",
                   }}
                 >
-                  Envoyer
+                  Send
                 </Button>
               </form>
             </div>
@@ -176,7 +176,7 @@ function ProductCTA(props) {
         <Snackbar
           open={open}
           onClose={handleClose}
-          message="I will find you soon !"
+          message="Your message has been sent successfully, i will reach you soon !"
         />
       </Container>
     );
