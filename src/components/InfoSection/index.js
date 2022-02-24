@@ -38,7 +38,6 @@ const InfoSection  = ({
                            <BtnWrap>
                            {id === 'discover' ? (
                                <>
-                               {/* <a href="/Images/Curriculum.pdf" download='Curriculum Vitae.pdf' target='_blank' > */}
                                <Button to='home'
                                 smooth = {true}
                                 duration = {500}
@@ -49,17 +48,12 @@ const InfoSection  = ({
                                 dark={dark ? 1: 0}
                                 dark2={dark2 ? 1: 0}
                                 onClick={()=>{
-                                    // window.location.href="/Images/Curriculum.pdf"
                                     window.open('/Files/Hamza Bouyahya CV.pdf', "_blank") 
 
                                 }}
                                >
                                    {buttonLabel}
                                </Button>
-
-                               {/* </a> */}
-                              
-
                                </>
 
                            )

@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Home  from './pages';
-import SigninPage from './pages/signin';
 import ScrollToTop from './ScrollToTop';
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import { makeStyles } from "@material-ui/core/styles";
@@ -37,9 +36,6 @@ function ScrollTop(props) {
   const { children, window } = props;
 
   const classes = useStyles();
-  // Note that you normally won't need to set the window ref as useScrollTrigger
-  // will default to window.
-  // This is only being set here because the demo is in an iframe.
   const trigger = useScrollTrigger({
     target: window ? window() : undefined,
     disableHysteresis: true,
@@ -79,8 +75,6 @@ function App(props) {
 
       <Switch>
         <Route path="/" component={Home} exact />
-        <Route path="/signin" component={SigninPage} exact />
-
       </Switch>
       <ScrollTop {...props}>
           <Fab

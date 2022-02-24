@@ -23,9 +23,7 @@ const Services = () => {
     return (
         <ServicesContainer id="services">
             <ServicesH1>Projects</ServicesH1>
-
                 <ServicesWrapper>
-
                     <a href="https://tunicare.netlify.app/" target='_blank' style={{
                         textDecoration: "none",
                         color: "#000"
