@@ -27,23 +27,7 @@ const Navbar = ({toggle}) => {
                     <Button to='discover' smooth={true}>Curriculum Vitae</Button>
                     <Button to='services' smooth={true} offset={-80}>Projects</Button>
                     <Button to='contact' smooth={true} offset={-80}>Contact</Button>
-
-                        {/* <NavItem>
-                            <NavLinks to='about'>About</NavLinks>
-                        </NavItem>
-                        <NavItem>
-                            <NavLinks to='discover'>Curriculum Vitae</NavLinks>
-                        </NavItem>
-                        <NavItem>
-                            <NavLinks to='services'>Projects</NavLinks>
-                        </NavItem>
-                        <NavItem>
-                          <NavLinks to="contact">Contact</NavLinks>
-                        </NavItem> */}
                     </NavMenu>
-                    {/* <NavBtn>
-                        <NavBtnLink to='/signin'>Sign In</NavBtnLink>
-                    </NavBtn> */}
                 </NavbarContainer>
             </Nav>
         </>
