@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     position: "fixed",
     bottom: theme.spacing(2),
-    right: theme.spacing(2)
+    right: theme.spacing(2),
   },
   fab: {
     color: "#fff",
@@ -24,9 +24,9 @@ const useStyles = makeStyles((theme) => ({
     "&:hover": {
       color: "#1E0F1C",
       backgroundColor: "#fff",
-      transition: "0.5s"
-    }
-  }
+      transition: "0.5s",
+    },
+  },
 }));
 
 function ScrollTop(props) {
@@ -36,7 +36,7 @@ function ScrollTop(props) {
   const trigger = useScrollTrigger({
     target: window ? window() : undefined,
     disableHysteresis: true,
-    threshold: 100
+    threshold: 100,
   });
 
   const handleClick = (event) => {
