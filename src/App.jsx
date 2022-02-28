@@ -1,8 +1,8 @@
-import React from 'react';
-import './App.css';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import Home  from './pages';
-import ScrollToTop from './ScrollToTop';
+import React from "react";
+import "./App.css";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Home from "./pages";
+import ScrollToTop from "./ScrollToTop";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import { makeStyles } from "@material-ui/core/styles";
 import Zoom from "@material-ui/core/Zoom";
@@ -11,13 +11,11 @@ import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 import Box from "@material-ui/core/Box";
 import { createMemoryHistory } from "history";
 
-
-
 const useStyles = makeStyles((theme) => ({
   root: {
     position: "fixed",
     bottom: theme.spacing(2),
-    right: theme.spacing(2),
+    right: theme.spacing(2)
   },
   fab: {
     color: "#fff",
@@ -26,11 +24,10 @@ const useStyles = makeStyles((theme) => ({
     "&:hover": {
       color: "#1E0F1C",
       backgroundColor: "#fff",
-      transition: "0.5s",
-    },
-  },
+      transition: "0.5s"
+    }
+  }
 }));
-
 
 function ScrollTop(props) {
   const { children, window } = props;
@@ -39,7 +36,7 @@ function ScrollTop(props) {
   const trigger = useScrollTrigger({
     target: window ? window() : undefined,
     disableHysteresis: true,
-    threshold: 100,
+    threshold: 100
   });
 
   const handleClick = (event) => {
@@ -64,27 +61,24 @@ function ScrollTop(props) {
 function App(props) {
   const classes = useStyles();
   const history = createMemoryHistory();
-  
-
 
   return (
-    <Router forceRefresh='true' history={history}>
-        <ScrollToTop/>
-        <Box id="back-to-top-anchor" />
-
+    <Router forceRefresh="true" history={history}>
+      <ScrollToTop />
+      <Box id="back-to-top-anchor" />
 
       <Switch>
         <Route path="/" component={Home} exact />
       </Switch>
       <ScrollTop {...props}>
-          <Fab
-            className={classes.fab}
-            size="small"
-            aria-label="scroll back to top"
-          >
-            <KeyboardArrowUpIcon />
-          </Fab>
-        </ScrollTop>
+        <Fab
+          className={classes.fab}
+          size="small"
+          aria-label="scroll back to top"
+        >
+          <KeyboardArrowUpIcon />
+        </Fab>
+      </ScrollTop>
     </Router>
   );
 }
